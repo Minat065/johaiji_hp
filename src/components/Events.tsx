@@ -1,20 +1,12 @@
 import React from "react";
 import { Box, Typography, Card, CardContent, Avatar } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 import FestivalIcon from "@mui/icons-material/Festival";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 // イベントデータは追加・修正可
 const events = [
-  {
-    icon: <WbSunnyIcon sx={{ fontSize: 36, bgcolor: "#ffd54f", borderRadius: "50%", p: 0.5 }} />,
-    date: "1月1日",
-    title: "元旦法要",
-    desc: "新年を迎え本堂にてご祈祷。家内安全・無病息災を祈念します。",
-  },
   {
     icon: <LocalFloristIcon sx={{ fontSize: 36, color: "#81c784" }} />,
     date: "4月8日",
@@ -33,17 +25,11 @@ const events = [
     title: "彼岸法要",
     desc: "春分・秋分の中日に、ご先祖供養や墓参りを行います。",
   },
-  {
-    icon: <CalendarTodayIcon sx={{ fontSize: 36, color: "#90caf9" }} />,
-    date: "随時",
-    title: "仏教講話・寺子屋イベント",
-    desc: "どなたでも参加可能な法話会や寺子屋イベントも開催。",
-  },
 ];
 
 export default function Events() {
   return (
-    <Box sx={{ py: 8, background: "#f5f5f5" }}>
+    <Box id="events" sx={{ py: 8, background: "#f5f5f5" }}>
       <Typography variant="h4" align="center" fontWeight={600} gutterBottom>
         年間行事・イベント
       </Typography>

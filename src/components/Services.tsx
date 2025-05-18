@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
-import GroupsIcon from '@mui/icons-material/Groups';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 const services = [
   {
@@ -17,15 +17,15 @@ const services = [
     description: "ご葬儀や永代供養墓、ペット供養まで幅広く対応しています。",
   },
   {
-    icon: <GroupsIcon fontSize="large" />,
-    title: "人生相談・仏教講話",
-    description: "日常の悩み相談や法話会、寺子屋イベントなども積極的に開催。",
+    icon: <AutoStoriesIcon fontSize="large" />,
+    title: "読経会",
+    description: "毎月第3日曜日 8:30〜 本堂にて開催。どなたでも参加可能です。",
   },
 ];
 
 export default function Services() {
   return (
-    <Box sx={{
+    <Box id="services" sx={{
      py: { xs: 4, md: 8 },            // スマホ時は小さく、PC時は大きく
      px: { xs: 2, sm: 4, md: 6 },      // 横余白も段階調整
      background: '#fff'

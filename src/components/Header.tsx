@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Button, useTheme, useMediaQuery, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Button, useTheme, useMediaQuery, Drawer, List, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 // ↓ SVGやPNGをimgタグで使う
 import logoUrl from '../assets/寺紋(黒).jpg'; // ← フォルダ名typo修正
@@ -9,7 +9,14 @@ interface HeaderProps {
   onSignOut: () => void;
 }
 
-const navs = ['About', 'Services', 'Gallery', 'Events', 'Interior', 'Access'];
+const navs = [
+  { label: 'About', id: 'about' },
+  { label: 'Services', id: 'services' },
+  { label: 'Gallery', id: 'gallery' },
+  { label: 'Events', id: 'events' },
+  { label: 'Interior', id: 'interior' },
+  { label: 'Access', id: 'access' },
+];
 
 export default function Header({ user, onSignOut }: HeaderProps) {
   const theme = useTheme();
@@ -19,17 +26,25 @@ export default function Header({ user, onSignOut }: HeaderProps) {
   const drawer = (
     <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
       <List>
-        {navs.map((text) => (
-          <ListItem button key={text} onClick={() => setDrawerOpen(false)}>
-            <ListItemText primary={text} />
-          </ListItem>
+        {navs.map(({ label, id }) => (
+          <ListItemButton key={id} onClick={() => scrollTo(id)}>
+            <ListItemText primary={label} />
+          </ListItemButton>
         ))}
-        <ListItem button onClick={onSignOut}>
+        <ListItemButton onClick={onSignOut}>
           <ListItemText primary="Sign Out" />
-        </ListItem>
+        </ListItemButton>
       </List>
     </Drawer>
   );
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+    setDrawerOpen(false);
+  };
 
   return (
     <AppBar position="sticky" color="transparent" elevation={0}>
@@ -49,9 +64,9 @@ export default function Header({ user, onSignOut }: HeaderProps) {
           </>
         ) : (
           <>
-            {navs.map((text) => (
-              <Button key={text} sx={{ ml: 2 }}>
-                {text}
+            {navs.map(({ label, id }) => (
+              <Button key={id} sx={{ ml: 2 }} onClick={() => scrollTo(id)}>
+                {label}
               </Button>
             ))}
             <Button color="secondary" variant="outlined" sx={{ ml: 2 }} onClick={onSignOut}>

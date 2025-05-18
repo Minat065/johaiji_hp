@@ -6,7 +6,7 @@ import sakuraImg from '../assets/本堂_全体_桜.jpg';
 
 export default function About() {
   return (
-    <Paper elevation={2} sx={{ my: 6, mx: "auto", maxWidth: 900, p: { xs: 2, md: 4 } }}>
+    <Paper elevation={2} id="about" sx={{ my: 6, mx: "auto", maxWidth: 900, p: { xs: 2, md: 4 } }}>
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={5}>
           <img

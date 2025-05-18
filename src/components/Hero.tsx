@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button, useTheme } from '@mui/material';
 import {styled } from '@mui/material/styles';
-//import AmidaImg from '../assets/阿弥陀如来.jpg';
+import amidaImg from '../assets/本堂_阿弥陀如来像.jpg';
 
 const HeroContainer = styled(Box)`
   position: relative;
   height: 70vh;
-  background: url('/images/本堂_全体.jpg') center/cover no-repeat;
+  background: url(${amidaImg}) center/cover no-repeat;
   display: flex;
-  align-s: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
 `;

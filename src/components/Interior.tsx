@@ -31,7 +31,7 @@ const statues = [
 
 export default function Interior() {
   return (
-    <Box sx={{ py: 8 }}>
+    <Box id="interior" sx={{ py: 8 }}>
       <Typography variant="h4" align="center" fontWeight={600} gutterBottom>
         本堂内部・仏像紹介
       </Typography>

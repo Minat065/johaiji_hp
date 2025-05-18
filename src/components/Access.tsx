@@ -4,7 +4,7 @@ import gateImg from "../assets/山門.jpg";
 
 export default function Access() {
   return (
-    <Box sx={{ py: 8, background: "#fafafa" }}>
+    <Box id="access" sx={{ py: 8, background: "#fafafa" }}>
       <Typography variant="h4" align="center" fontWeight={600} gutterBottom>
         アクセス・連絡先
       </Typography>

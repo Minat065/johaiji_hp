@@ -79,7 +79,7 @@ export default function Gallery() {
   };
 
   return (
-    <Box sx={{ py: 8, textAlign: "center" }}>
+    <Box id="gallery" sx={{ py: 8, textAlign: "center" }}>
       <Typography variant="h4" fontWeight={600} gutterBottom>
         ギャラリー
       </Typography>
