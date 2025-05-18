@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardMedia } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import amidaImg from "../assets/本堂_阿弥陀如来像.jpg";
 import yakushiImg from "../assets/本堂_薬師如来.jpg";
 import kannonImg from "../assets/灌仏会_本尊.jpg";

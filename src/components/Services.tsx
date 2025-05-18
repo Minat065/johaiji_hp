@@ -1,6 +1,6 @@
-// src/components/Services.tsx
 import React from "react";
-import { Grid, Card, CardContent, Typography, Box } from "@mui/material";
+import { Card, CardContent, Typography, Box } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import GroupsIcon from '@mui/icons-material/Groups';

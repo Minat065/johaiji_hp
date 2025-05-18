@@ -1,10 +1,8 @@
-import React from "react";
-import { Box, Typography, Grid, Paper } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
+import Grid from '@mui/material/Grid';
 import honboImg from '../assets/本堂_全体.jpg';
 import sanmonImg from '../assets/山門.jpg';
 import sakuraImg from '../assets/本堂_全体_桜.jpg';
-// …他も同様に
-
 
 export default function About() {
   return (
@@ -45,3 +43,4 @@ export default function About() {
     </Paper>
   );
 }
+

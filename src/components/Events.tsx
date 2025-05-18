@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Typography, Grid, Card, CardContent, Avatar } from "@mui/material";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import { Box, Typography, Card, CardContent, Avatar } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 import FestivalIcon from "@mui/icons-material/Festival";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 // イベントデータは追加・修正可
 const events = [

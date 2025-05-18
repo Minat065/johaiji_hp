@@ -9,7 +9,7 @@ interface HeaderProps {
   onSignOut: () => void;
 }
 
-const navItems = ['About', 'Services', 'Gallery', 'Events', 'Interior', 'Access'];
+const navs = ['About', 'Services', 'Gallery', 'Events', 'Interior', 'Access'];
 
 export default function Header({ user, onSignOut }: HeaderProps) {
   const theme = useTheme();
@@ -19,7 +19,7 @@ export default function Header({ user, onSignOut }: HeaderProps) {
   const drawer = (
     <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
       <List>
-        {navItems.map((text) => (
+        {navs.map((text) => (
           <ListItem button key={text} onClick={() => setDrawerOpen(false)}>
             <ListItemText primary={text} />
           </ListItem>
@@ -49,9 +49,9 @@ export default function Header({ user, onSignOut }: HeaderProps) {
           </>
         ) : (
           <>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ ml: 2 }}>
-                {item}
+            {navs.map((text) => (
+              <Button key={text} sx={{ ml: 2 }}>
+                {text}
               </Button>
             ))}
             <Button color="secondary" variant="outlined" sx={{ ml: 2 }} onClick={onSignOut}>

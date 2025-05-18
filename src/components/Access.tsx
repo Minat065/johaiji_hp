@@ -1,6 +1,5 @@
-
-import React from "react";
-import { Box, Typography, Grid, Paper, Link } from "@mui/material";
+import { Box, Typography, Paper, Link } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import gateImg from "../assets/山門.jpg";
 
 export default function Access() {
@@ -24,7 +23,6 @@ export default function Access() {
             <Typography variant="body1" gutterBottom>
               0465-48-5065
             </Typography>
-            {/* 公開可能ならメールも */}
             <Typography variant="h6" fontWeight={600} gutterBottom>
               メール
             </Typography>
@@ -72,3 +70,4 @@ export default function Access() {
     </Box>
   );
 }
+

@@ -43,7 +43,7 @@ const fadeDuration = 600; // フェードms（滑らかさ重視なら500～800m
 export default function Gallery() {
   const [current, setCurrent] = useState(0);
   const [fade, setFade] = useState(true);
-  const timer = useRef<NodeJS.Timeout | null>(null);
+  const timer = useRef<number | null>(null);
 
   // 自動切り替え
   useEffect(() => {

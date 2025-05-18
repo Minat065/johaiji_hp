@@ -8,7 +8,7 @@ const HeroContainer = styled(Box)`
   height: 70vh;
   background: url('/images/本堂_全体.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center;
+  align-s: center;
   justify-content: center;
   text-align: center;
 `;

@@ -1,6 +1,7 @@
 // src/components/Footer.tsx
 import React from 'react';
-import { Box, Container, Grid, Typography, Link, IconButton } from '@mui/material';
+import { Box, Container, Typography, Link, IconButton } from '@mui/material';
+import Grid from "@mui/material/Grid";
 import { Facebook, Instagram } from '@mui/icons-material';
 
 export default function Footer() {
